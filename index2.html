@@ -1,0 +1,49 @@
+<html>
+<html lang="en">
+
+<head>
+    <title>State and local Government areas in Nigeria (dropdown)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <form>
+        <div class="form-group">
+            <label class="control-label">Class</label>
+            <select onchange="selectSubject(this);" name="classs" id="classs" class="custom-select">
+                                <option value="" selected="selected">- Select -</option>
+                                <option value="Nursery">Nursery</option>
+                                <option value="Primary">Primary</option>
+                                <option value="JSS">Junior Secondary</option>
+                                <option value="SSS">Senior Secondary</option>
+                                
+                         </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Subject</label>
+            <select name="subject" id="subject" class="custom-select select-subject" required>
+            </select>
+        </div>
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/subject.js"></script>
+</body>
+
+</html>

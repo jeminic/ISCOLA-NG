@@ -1,0 +1,1020 @@
+input:focus{
+    outline: none;
+    border: none;
+}
+select:focus{
+    outline: none;
+    border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        background-color: white;
+        z-index: 2500;
+        text-align: center;
+    }
+    .nav-icons {
+        display: inline-block;
+        margin: 8px;
+    }
+}
+
+#loader {
+    background-color: #86BBD8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.entirepage {
+    height: 100%;
+}
+
+
+/* Login page style starts here */
+
+.input-icon {
+    float: right;
+    margin-right: 25px;
+    margin-top: -52px;
+    position: relative;
+    z-index: 2;
+    color: #b1b0b0;
+}
+
+.bttn {
+    height: 50px;
+    background-color: #2F4858;
+    border: none;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    font-weight: 700;
+}
+
+.bgOpaque {
+    background-color: #0A1128;
+    position: absolute;
+    height: auto !important;
+    min-height: 100%;
+    width: 100%;
+    vertical-align: center;
+}
+
+.textarea {
+    text-align: center;
+    padding: 20px;
+}
+
+.textarea h1 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #0A1128;
+    margin-bottom: 30px;
+}
+
+.textarea p {
+    font-size: 13px;
+    color: #3c3744;
+}
+
+.schoolcard {
+    background: #2F4858;
+    background-image: url('...img/IMG_0944x-1024x439.jpg');
+    background-blend-mode: multiply;
+    height: auto !important;
+    min-height: 100%;
+    text-align: center;
+    width: 100%;
+    color: #fbfff1;
+    background-size: auto 100%;
+    /* border-radius: 10px; */
+}
+
+.schoolcard i {
+    font-size: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.colOne {
+    background-color: #fbfff1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border-radius: 10px; */
+    /* padding: 15px; */
+    padding-bottom: 0px;
+    -webkit-box-shadow: 0px 11px 23px -6px rgba(0, 0, 0, 0.178);
+    -moz-box-shadow: 0px 11px 23px -6px rgba(0, 0, 0, 0.178);
+    box-shadow: 0px 11px 23px -6px rgba(0, 0, 0, 0.178);
+}
+
+.formcard {
+    vertical-align: center;
+    margin: auto 0;
+    text-align: center;
+}
+
+.inputForm {
+    display: block;
+    background-color: transparent;
+    color: #2F4858;
+    width: 90%;
+    height: 50px;
+    border: 1px solid #F26419;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    /* border-radius: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: #b1b0b0c0;
+    text-align: center;
+}
+
+.inputForm::placeholder {
+    color: #b1b0b0;
+    text-align: center;
+}
+
+.inputForm:focus {
+    border: none;
+    border-bottom: 1px solid #b1b0b0;
+    outline: none;
+}
+
+.inputBtn {
+    background-color: #F26419;
+    color: #fbfff1;
+    width: 90%;
+    height: 50px;
+    margin-bottom: 20px;
+    /* border-radius: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    -webkit-box-shadow: 0px 11px 23px -6px #F264198c;
+    -moz-box-shadow: 0px 11px 23px -6px #F264198c;
+    box-shadow: 0px 11px 23px -6px #F264198c;
+}
+
+.powered {
+    display: block;
+    margin-top: 0px;
+    text-align: center;
+    color: #2F4858;
+}
+
+.navv {
+    font-size: 13px;
+    color: #fbfff1;
+}
+
+.navv a {
+    text-decoration: none;
+    color: #fbfff1;
+    /* padding: 10px; */
+    margin: 10px;
+    margin-left: 0;
+    /* background-color: #b4c5e4; */
+}
+
+.navv .dropdown-menu {
+    width: 200px;
+    background-color: #2F4858;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .schoolcard {
+        display: none;
+    }
+    .colOne {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .navv {
+        text-align: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .navv a {
+        display: block;
+    }
+}
+
+
+/* login page style ends here  */
+
+html,
+body,
+.maincontainer {
+    height: 100%;
+    background-color: #F5F6FA;
+}
+
+.entirepage {
+    background-color: #F5F6FA;
+}
+
+
+/* side bar styling starts here  */
+
+.sidebar {
+    background-color: #2F4858;
+    /* min-height: 100%; */
+    width: 100%;
+    /* position: fixed; */
+    color: white;
+    padding: 0px;
+    overflow: hidden;
+    /* vertical-align: middle; */
+}
+
+.sidebar h1 {
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    color: #cccccc;
+    padding: 0 40px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.nav:hover {
+    color: #fbfff1;
+    background-color: #F26419;
+    padding: auto;
+    margin: auto;
+    border-right: 3px solid #fbfff1;
+}
+
+.nav i {
+    margin-right: 15px;
+}
+
+.activee {
+    background-color: #F26419;
+    border-right: 3px solid #fbfff1;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fbfff1;
+    display: block;
+    line-height: 45px;
+}
+
+.nav a:active {
+    color: #fbfff1;
+}
+
+.nav a:hover {}
+
+.nav a img {
+    height: 20px;
+    width: 20px;
+    color: #fbfff1;
+    margin-right: 15px;
+}
+
+.sidebar hr {
+    margin: 0 20px;
+    background-color: #fbfff1;
+    margin-bottom: 20px;
+}
+
+.headings {
+    color: #ffffff;
+    margin: 10px 20px;
+    font-weight: 700;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+
+/* side bar styling ends here */
+
+.mainContent {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.label {
+    font-size: 12px;
+}
+
+.welcome {
+    background-color: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 11px 23px -6px rgba(0, 0, 0, 0.178);
+    -moz-box-shadow: 0px 11px 23px -6px rgba(0, 0, 0, 0.178);
+    box-shadow: 0px 11px 23px -6px rgba(0, 0, 0, 0.178);
+}
+
+.welcome h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: 12px;
+    color: #3c3744;
+}
+
+.profile {
+    float: right;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.note .fa {
+    font-size: 25px;
+    float: right;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.noot {
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-left: -29px;
+    background-color: #F26419;
+    z-index: 10000;
+    color: white;
+}
+
+.notify {
+    float: right;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdownstyled{
+    min-width: 25rem;
+    margin-right: 35px;
+    padding-top: 0px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.dropdown-profile-header{
+    background-color: #2C3E50;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px ;
+}
+.dropdown-profile-header .profile-pic img{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    
+   
+}
+.dropdown-profile-header .profile-info{
+    float: left;
+    
+}
+.dropdown-profile-header .profile-pic{
+    overflow: hidden;
+    
+   
+}
+.dropdown-profile-header .profile-info h3{
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 30px;
+    
+
+}
+.dropdown-profile-header p{
+   
+    font-size: 15px;
+    margin-top: -10px;
+    color: #ffffff;
+}
+.logout-btn button{
+    margin-top: 30px;
+    background-color: #F26419;
+    color: #ffffff;
+    border: none;
+    min-width: 100%;
+    height: 30px;
+}
+.itemz{
+    height: 60px;
+    line-height: 20px;
+    padding-top: 20px;
+    
+}
+.notifyrow{
+    margin: 0px;
+}
+.itemz:hover{
+    background-color: transparent;
+}
+.caret-off::before {
+    display: none;
+}
+
+.caret-off::after {
+    display: none;
+}
+
+.notify .fa {
+    font-size: 22px;
+    animation: pulse ;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.notificationMessages {
+   width: 22rem;
+   margin-right: 205px;
+   padding-top: 0px;
+    
+}
+
+.dropdown-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.notifes p{
+    word-wrap:break-word;
+    white-space: pre-wrap;
+}
+
+
+/* welcome address style ends here */
+
+
+/* population styling starts here */
+
+.One {
+    display: inline-block;
+    background-color: white;
+    padding: 15px;
+    background-clip: content-box;
+    color: #2F4858;
+}
+
+.Two {
+    display: inline-block;
+    background-color: white;
+    padding: 15px;
+    background-clip: content-box;
+    color: #86BBD8;
+}
+
+.Three {
+    background-color: white;
+    display: inline-block;
+    padding: 15px;
+    background-clip: content-box;
+    color: #F6AE2D;
+}
+
+.cardd p {
+    padding-left: 20px;
+    margin-top: -5px;
+    font-size: 12px;
+    color: #afafaf;
+    font-weight: 600;
+}
+
+.cardd {
+    border-radius: 25px;
+    height: auto;
+    width: 100%;
+    -webkit-animation: fade-in 1.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cardd h3 {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+.cardd .fa {
+    font-size: 55px;
+    padding: 20px;
+}
+
+.SC {
+    background: url("/img/cardBG.png");
+    background-size: cover;
+    border-radius: 25px;
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    background-clip: content-box;
+    color: white;
+    text-align: center;
+    -webkit-animation: scale-in-center 1.8s ease-in-out both;
+    animation: scale-in-center 1.8s ease-in-out both;
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.SC h3 {
+    font-weight: 700;
+    margin-top: 45px;
+}
+
+.SC .btnn {
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid#F26419;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.SC .btnn:hover {
+    background-color: #F26419;
+    border: none;
+}
+
+
+/*  population analaytics style ends here  */
+
+
+/* financial analytics style starts here */
+
+.finArea {
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    margin: 0;
+    /* margin-bottom: 25px; */
+    margin-top: 25px;
+}
+
+.finArea h3 {
+    font-size: 15px;
+}
+
+.finArea h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.prg {
+    height: 7px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.baar {
+    height: 7px;
+    background-color: #F6AE2D;
+}
+
+.baaar {
+    height: 7px;
+    background-color: #F26419;
+}
+
+
+/* financial analytics style ends here */
+
+
+/* students table style starts here */
+
+td .fa {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+td .fa-trash {
+    color: #F26419;
+}
+
+#example_filter {
+    float: right;
+}
+
+#example_paginate {
+    float: right;
+}
+
+#example_paginate>ul>li.paginate_button.page-item.active>a {
+    background-color: #F26419;
+    border: none;
+    outline: none;
+}
+
+#example_paginate>ul>li.paginate_button.page-item>a {
+    border: 1px solid #F26419;
+    color: #2F4858;
+    outline: none;
+}
+
+#example_paginate>ul>li.paginate_button.page-item>a:focus {
+    outline: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #example_filter {
+        float: none;
+    }
+    #example_paginate {
+        float: none;
+    }
+}
+
+
+/* students table style ends here */
+
+
+/* Powered by Ischola NG*/
+
+.copyright {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+
+/* Powered by Ischola NG*/
+
+
+/* Teachers Page Css Starts here */
+
+
+/* Table area css starts here  */
+
+.teachersListTable {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    margin: 0;
+    /* margin-bottom: 25px; */
+    margin-top: 25px;
+    background-color: white;
+}
+
+
+
+.adduserarea {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    margin: 0;
+    /* margin-bottom: 25px; */
+    margin-top: 25px;
+}
+
+
+/* Add teachers button */
+
+.addteachersBtn {
+    background-color: #F26419;
+    height: 40px;
+    width: 150px;
+    border: none;
+    /* float: right; */
+    color: white;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.rightbtn{
+    float: right;
+    background-color: #2C3E50;
+}
+
+/* Modal Settings Add Teachers */
+
+.secondary-button {
+    background-color: #2F4858;
+    height: 40px;
+    width: 150px;
+    border: none;
+    margin-bottom: 50px;
+    color: white;
+    font-weight: 700;
+    
+}
+
+
+/*Table area css ends here  */
+
+
+/* Modal for add teachers, add students or add user */
+
+.form-inputs input {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #0A1128;
+}
+.form-inputs textarea{
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border: 1px solid #0A1128;
+}
+
+.form-inputs input:focus {
+    border: none;
+}
+
+.form-inputs input::placeholder {
+    font-size: 13px;
+}
+
+.form-inputs select {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin-bottom: 25px;
+    border: 1px solid #0A1128;
+}
+
+#phone {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.form-inputs label {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.form-inputs span {
+    color: #ff0000;
+}
+
+.wide-modal {
+    width: 700px;
+    margin-left: -100px;
+    padding: 20px;
+}
+
+.wide-modal .modal-body {
+    width: 100%;
+}
+
+.modal-body form {
+    margin-top: 25px;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .wide-modal {
+        width: 320px;
+        margin-left: 10px;
+    }
+}
+
+
+.fs-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 15px;
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-section{
+    display: none;
+}
+.form-section.current {
+    display: inherit;
+  }
+.parsley-required{
+    color:#ff0000;
+}
+.title-of-modal{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Modal for add teachers, add students or add user */
+
+/* Expenses page style starts here  */
+/* expenses chart and cards style here  */
+.expensecontainer{
+    margin-left: 0px;
+    margin-left: 0px;
+}
+
+.expensecontainer .downloadreport {
+   
+    /* margin-top: 20px; */
+    
+
+}
+.expensecontainer a{
+    background-color: #F5F6FA;
+    padding:10px;
+    float: right;
+}
+.revenuecard {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:10px;
+    border: 1px solid #F5F6FA;
+    -webkit-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.08);
+}
+
+.revenuecard h4{
+    padding-left: 20px;
+    margin-top: -15px;
+    color: #2C3E50;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.revenuecard p{
+    padding-top: 10px;
+    font-size: 15px;
+}
+    
+.revenuecard .fa{
+    font-size: 35px;
+    color: #F26419
+    
+}
+
+.expensecard {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:10px;
+    border: 1px solid #F5F6FA;
+    -webkit-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.08);
+}
+
+.expensecard h4{
+    padding-left: 20px;
+    margin-top: -15px;
+    color: #2C3E50;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.expensecard p{
+    padding-top: 10px;
+    font-size: 15px;
+}
+    
+.expensecard .fa{
+    font-size: 35px;
+    color: #2C3E50
+    
+}
+
+
+
+.chartheading h4{
+font-size: 20px;
+font-weight: 700;
+}
+
+.chartheading p{
+    font-size: 13px;
+}
+
+/* Expenses page style stops here */
+
+/* fee management page style starts here */
+.searchform{
+    width: 100%;
+    padding: 20px;
+}
+.Applybtn{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.nav-item .active{
+    background-color: #86BBD8;
+}
+
+/* fee management page style stops here  */
