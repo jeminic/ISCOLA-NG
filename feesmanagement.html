@@ -1,0 +1,498 @@
+<html>
+
+<head>
+    <title>Expenses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--  telephone codes css -->
+    <link rel="stylesheet" href="build/css/intlTelInput.css">
+    <!-- end of telephone code css -->
+
+    <!-- bootstrap styles -->
+    <script type="text/javascript" src="bootstrap-4.4.1-dist\js\bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.4.1-dist/jquery/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- font awesome 5  -->
+    <script src="https://kit.fontawesome.com/01640dedc7.js" crossorigin="anonymous"></script>
+    <!-- main styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+    <!-- main javascript files -->
+
+
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script src="node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+
+</head>
+
+<body>
+    <!-- <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_N3B1Jn.json" background="transparent" speed="1" id="loader" loop autoplay>
+    </lottie-player> -->
+    <div class="container-fluid maincontainer ">
+        <div class="row entirepage">
+            <!-- side bar starts here -->
+            <div class="col-lg-2 col-md-2 sidebar">
+                <h1>ISCHOLA NG</h1>
+                <div class="nav ">
+                    <a href="./Principal_Dashboard.html"> <i class="fa fa-home" aria-hidden="true"></i> Dashboard </a>
+                </div>
+                <p class="headings">Population</p>
+                <hr>
+                <div class="nav ">
+                    <a href="Teachers.html"> <i class="fa fa-chalkboard-teacher"></i> Teachers </a>
+                </div>
+                <div class="nav">
+                    <a href="Students.html"> <i class="fa fa-user-graduate"></i>Students </a>
+                </div>
+                <div class="nav">
+                    <a href="Admission.html"> <i class="fa fa-user-graduate"></i>Admission </a>
+                </div>
+                <div class="nav">
+                    <a href="#">Parents </a>
+                </div>
+                <p class="headings">Academics</p>
+                <hr>
+                <div class="nav">
+                    <a href="#">Sessions </a>
+                </div>
+                <div class="nav">
+                    <a href="#"> <i class="fa fa-book" aria-hidden="true"></i>Classes </a>
+                </div>
+                <div class="nav">
+                    <a href="#">Results </a>
+                </div>
+                <p class="headings">Finance</p>
+                <hr>
+                <div class="nav activee">
+                    <a href="#">Expenses</a>
+                </div>
+                <div class="nav">
+                    <a href="#">Fees Management</a>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 remainCon">
+                <div class="row mainContent welcome">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 ">
+                        <h1>Fees Management</h1>
+                        <p>Here you can manage you expenses and your income</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 note">
+
+                        <div class="dropdown">
+                            <button class="profile dropdown-toggle" type="button" id="dropdownMenuBtn"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img\photo-1511367461989-f85a21fda167.jpg" style="width: 30px; height: 30px;">
+                                Nurudeen
+                            </button>
+                            <div class="dropdown-menu dropdownstyled" aria-labelledby="dropdownMenuBtn">
+                                <div class=" row dropdown-profile-header">
+                                    <div class=" col-2 profile-pic">
+                                        <img src="img\photo-1511367461989-f85a21fda167.jpg">
+                                    </div>
+                                    <div class="col-6 profile-info">
+                                        <h3>Nurudeen Danaldi</h3>
+                                        <p>Principal </p>
+                                    </div>
+                                    <div class="col-4 logout-btn">
+                                        <button>Logout</button>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item itemz " href="#">Edit Profile</a>
+                                <a class="dropdown-item itemz" href="#">Settings</a>
+                                <a class="dropdown-item itemz " href="#">Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <span class="badge noot">12</span>
+                            <a class="dropdown-toggle notify" id="dropdownnotifications" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"> </i>
+                            </a>
+                            <div class="dropdown-menu notificationMessages" aria-labelledby="dropdownnotifications">
+
+                                <div class="dropdown-item  row notifyrow" href="#">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 notifes">
+                                        <h4>First message for Schools</h4>
+                                        <p> There is going to be a PTA meeting on the 24th of June 2020. Please inform
+                                            you parents accordingly..</p>
+
+
+                                    </div>
+                                </div>
+
+                                <a class="dropdown-item" href="#">Notification 1</a>
+
+                            </div>
+                        </div>
+                        <i class="fa fa-home"></i>
+
+                    </div>
+                </div>
+
+
+                <div class=" row teachersListTable">
+                    <form class="searchform">
+                        <div class="form-row ">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-12 form-inputs">
+                                <label>Select Session</label>
+                                <select class="custom-select">
+                                    <option>-select-</option>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-12 form-inputs">
+                                <label>Select Term</label>
+                                <select class="custom-select">
+                                    <option>-select-</option>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-12 form-inputs">
+                                <label>Select class</label>
+                                <select class="custom-select">
+                                    <option>-select-</option>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-12 form-inputs">
+                                <button class="addteachersbtn Applybtn">Apply</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row teachersListTable">
+                    <div class="dropdown">
+                        <button class="addteachersbtn dropdown-toggle" data-toggle="dropdown" type="button"
+                            id="feesAddition">Add Payment</button>
+                        <div class="dropdown-menu" aria-labelledby="feesAddition">
+                            <a class="dropdown-item" data-toggle="modal" data-target="#fullPayment">On-time
+                                Full
+                                Payment</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#partPayment"> Part
+                                Payment </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal for adding full payment starts here -->
+                    <div class="modal fade " id="fullPayment" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content wide-modal">
+                                <div class="modal-header">
+                                    <h5 class="modal-title title-of-modal" id="exampleModalLabel">Add Full
+                                        Payment
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-inputs">
+                                            <label> Admission Number</label>
+                                            <select>
+                                                <option>- select -</option>
+                                                <option>ISCHOLA001</option>
+                                                <option>ISCHOLA002</option>
+                                                <option>ISCHOLA003</option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-inputs">
+                                            <label>Students Name</label>
+                                            <input type="text" placeholder="Students Name Autogenerated" disabled>
+                                        </div>
+
+                                        <div class="form-inputs">
+                                            <label>Income Amount</label>
+                                            <input type="number"
+                                                placeholder="type in the amount without the comma eg: 30000 for 30,000">
+                                        </div>
+
+                                        <div class="form-inputs">
+                                            <label>Transaction Date</label>
+                                            <input type="date">
+                                        </div>
+                                        <button type="button" class="secondary-button"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="addteachersbtn">Save changes</button>
+
+
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer ">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for adding Part payment starts here -->
+                    <div class="modal fade " id="partPayment" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content wide-modal">
+                                <div class="modal-header">
+                                    <h5 class="modal-title title-of-modal" id="exampleModalLabel">Add
+                                        Expense
+                                        Transaction
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-inputs">
+                                            <label> Transaction Category</label>
+                                            <select>
+                                                <option>- select -</option>
+                                                <option>Fees</option>
+                                                <option>Book Sale</option>
+                                                <option>Store Sales( uniforms, sportswear, etc)</option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-inputs">
+                                            <label>Transaction Description</label>
+                                            <textarea rows="4"></textarea>
+                                        </div>
+
+                                        <div class="form-inputs">
+                                            <label>Expense Amount</label>
+                                            <input type="number"
+                                                placeholder="type in the amount without the comma eg: 30000 for 30,000">
+                                        </div>
+
+                                        <div class="form-inputs">
+                                            <label>Transaction Date</label>
+                                            <input type="date">
+                                        </div>
+                                        <button type="button" class="secondary-button"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="addteachersbtn">Save changes</button>
+
+
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer ">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <table id="example" class="table table-striped table-responsive-sm table-responsive-xs "
+                        style="width:100% ">
+                        <thead>
+                            <tr>
+                                <th>Receipt Number</th>
+                                <th> Category</th>
+                                <th>Description</th>
+                                <th>Date of Transaction</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Income </td>
+                                <td> 200,000</td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td>Expenses </td>
+                                <td> 200,000 </td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>unifrom</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Income </td>
+                                <td> 200,000</td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Expense</td>
+                                <td> 200,000 </td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Income </td>
+                                <td> 200,000</td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td>Expense </td>
+                                <td> 200,000 </td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Income </td>
+                                <td> 200,000</td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td>Expense </td>
+                                <td> 200,000 </td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Income </td>
+                                <td> 200,000</td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td>Expense</td>
+                                <td> 200,000 </td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td> Income </td>
+                                <td> 200,000</td>
+                            </tr>
+                            <tr>
+                                <td>ISCHOLA001</td>
+                                <td>Books</td>
+                                <td>English Text Book</td>
+                                <td>03/12/2020</td>
+                                <td>Expense</td>
+                                <td> 200,000 </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Receipt Number</th>
+                                <th> Category</th>
+                                <th>Description</th>
+                                <th>Date of Transaction</th>
+                                <th>Income</th>
+                                <th>Expense</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="js/multiform.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="build/js/intlTelInput.js"></script>
+
+    <script src="js\parsely.js"></script>
+    <script>
+        var input = document.querySelector(".phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function (callback) {
+                $.get('https://ipinfo.io', function () { }, "jsonp").always(function (resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                });
+            },
+            preferredCountries: ['ng', 'ml'],
+            utilsScript: "build/js/utils.js" // just for formatting/placeholders etc
+        });
+    </script>
+    <!-- <script>
+        $(".nav-tabs a.nav-link").click(function () {
+            var x = $(this).attr("href");
+            x = x.replace("#", "");
+            $(".tab-content .tab-pane").each(function () {
+                var y = $(this).attr("id");
+                if (x == y) $(this).addClass("active show");
+                else $(this).removeClass("active show");
+            });
+        });
+    </script> -->
+
+
+
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js "></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js "></script>
+
+
+
+
+
+</body>
+
+</html>
