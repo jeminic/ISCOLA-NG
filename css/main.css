@@ -824,6 +824,7 @@ td .fa-trash {
 
 .form-inputs input:focus {
     border: none;
+    outline: none;
 }
 
 .form-inputs input::placeholder {
@@ -837,7 +838,9 @@ td .fa-trash {
     margin-bottom: 25px;
     border: 1px solid #0A1128;
 }
-
+.form-inputs select option:hover{
+    background-color: #ff0000;
+}
 #phone {
     margin-bottom: 25px;
     width: 100%;
@@ -1018,3 +1021,102 @@ font-weight: 700;
 }
 
 /* fee management page style stops here  */
+
+
+
+.tabbtn, .tabbtn2{
+    margin-bottom: -25px;
+    height: 50px;
+    border: none;
+    margin-right: 5px;
+    padding:15px;
+    background-color: #ffffff;
+    font-weight: 700;
+    color: #0A1128;
+}
+.tabcontent, .tabcontent2{
+    display: none;
+}
+ .tab-nav>.tabbtn.active, .tab-nav>.tabbtn2.active{
+    /* border-bottom: 3px solid #ff0000; */
+    outline: none;
+    background-color: #F5F6FA;
+    color: #ff0000;
+
+
+    
+}.tabbtn:focus, .tabbtn2:focus{
+    outline: none;
+}
+
+.card-heading-paragraph h2{
+display: block;
+font-size: 20px;
+margin: 15px;
+margin-left: 10px ;
+margin-bottom: 5px;
+}
+.card-heading-paragraph p{
+    display: block;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general input style */
+
+input:focus,input:active{
+outline: none;
+}
+.darkbg{
+    background-color: #ffffff;
+}
+
+.newFormRow{
+    margin-right: 20px; 
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.multipled{
+    height: 200px;
+}
+.form-inputs .blackbg{
+    background-color: #ffffff;
+    border: none;
+}
+select option{
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    outline: none;
+
+}
+select option:hover{
+    background-color: #ff0000;
+    color: white;
+    outline: none;
+}
+option:checked{
+    background-color: #ff0000;
+    outline: none;
+    border: none;
+    color: white;
+}
+.form-inputs .multipled{
+    height: 80px;
+}
+/* Dropdown multiselect style here */
+

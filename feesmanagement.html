@@ -26,6 +26,7 @@
 
 
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -35,6 +36,7 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- <script type="text/javascript" src="js/main.js"></script> -->
     <!-- main javascript files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 
 
     <script type="text/javascript" src="js/chart.js"></script>
@@ -80,11 +82,11 @@
                 </div>
                 <p class="headings">Finance</p>
                 <hr>
-                <div class="nav activee">
-                    <a href="#">Expenses</a>
-                </div>
                 <div class="nav">
-                    <a href="#">Fees Management</a>
+                    <a href="expenses.html">Expenses</a>
+                </div>
+                <div class="nav activee">
+                    <a href="feesmanagement.html">Fees Management</a>
                 </div>
 
 
@@ -92,11 +94,11 @@
             </div>
 
             <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 remainCon">
-                
+
                 <div class="row mainContent welcome">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 ">
                         <h1>Fees Management</h1>
-                        <p>Here you can manage you expenses and your income</p>
+                        <p>Here you can manage everything from fee types, making manual payments, etc..</p>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 note">
 
@@ -152,297 +154,513 @@
 
                     </div>
                 </div>
-                <div class=" row teachersListTable">
-                    <button class="tabbtn" onclick="tab(this)"> Search</button>
-                    <button class="tabbtn" onclick="tab(this)">Add Fees</button>
-                    <button class="tabbtn" onclick="tab(this)">Make Payment</button> 
+                <div class="row teachersListTable" style="background-color: transparent;">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="revenuecard cardd">
+                            <p> Total Fees</p>
+                            <h4> N 1,000,000 </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="revenuecard cardd">
+                            <p> Total Paid Fees</p>
+                            <h4> N 1,000,000 </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="revenuecard cardd">
+                            <p> Total Outstanding Fees</p>
+                            <h4> N 1,000,000 </h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row teachersListTable tab-nav">
+                    <button class="tabbtn" onclick="tab(this, 'search')" id="defaultOpen"> Search</button>
+                    <button class="tabbtn" onclick="tab(this, 'addfees')">Add Fees</button>
+                    <button class="tabbtn" onclick="tab(this, 'makepayment')">Make Payment</button>
 
 
                 </div>
 
+                <div id="search" class="tabcontent">
 
-                <div class=" row teachersListTable">
-                    <form class="searchform">
-                        <div class="form-row ">
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-12 form-inputs">
-                                <label>Select Session</label>
-                                <select class="custom-select">
-                                    <option>-select-</option>
-                                    <option></option>
-                                </select>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-12 form-inputs">
-                                <label>Select Term</label>
-                                <select class="custom-select">
-                                    <option>-select-</option>
-                                    <option></option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-12 form-inputs">
-                                <label>Select class</label>
-                                <select class="custom-select">
-                                    <option>-select-</option>
-                                    <option></option>
-                                </select>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-12 col-12 form-inputs">
-                                <button class="addteachersbtn Applybtn">Apply</button>
-                            </div>
+
+                    <div class=" row teachersListTable card-heading-paragraph">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h2>Search Fees per session</h2>
+                            <p> Here you can find out the fees of individual students, class and session fees</p>
                         </div>
-                    </form>
+                        <form class="searchform">
+                            <div class="form-row ">
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12 form-inputs">
+                                    <label>Select Session</label>
+                                    <select class="custom-select">
+                                        <option>-select-</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12 form-inputs">
+                                    <label>Select Term</label>
+                                    <select class="custom-select">
+                                        <option>-select-</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-12 form-inputs">
+                                    <label>Select class</label>
+                                    <select class="custom-select">
+                                        <option>-select-</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-12 col-12 form-inputs">
+                                    <button class="addteachersbtn Applybtn">Apply</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row teachersListTable">
+                        <table id="example" class="table table-striped table-responsive-sm table-responsive-xs "
+                            style="width:100% ">
+                            <thead>
+                                <tr>
+                                    <th>Receipt Number</th>
+                                    <th> Students Name</th>
+                                    <th>Students Class</th>
+                                    <th>Date of Transaction</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td>Part Payment</td>
+                                    <td> 200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td>Full Payment </td>
+                                    <td> 200,000 </td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amhed Wale Somtochukwu</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td> part payment </td>
+                                    <td> 200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td> Expense</td>
+                                    <td> 200,000 </td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td> part payment </td>
+                                    <td> 200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td>Expense </td>
+                                    <td> 200,000 </td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td> part payment </td>
+                                    <td> 200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td>Expense </td>
+                                    <td> 200,000 </td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td> part payment </td>
+                                    <td> 200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td>Expense</td>
+                                    <td> 200,000 </td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td> part payment </td>
+                                    <td> 200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>ISCHOLA001</td>
+                                    <td>Amina Simbi Ada</td>
+                                    <td>JSS 1B</td>
+                                    <td>03/12/2020</td>
+                                    <td>Expense</td>
+                                    <td> 200,000 </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Receipt Number</th>
+                                    <th>Students Name</th>
+                                    <th>Students Class</th>
+                                    <th>Date of Transaction</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
                 </div>
-                <div class="row teachersListTable">
-                    <div class="dropdown">
-                        <button class="addteachersbtn dropdown-toggle" data-toggle="dropdown" type="button"
-                            id="feesAddition">Add Payment</button>
-                        <div class="dropdown-menu" aria-labelledby="feesAddition">
-                            <a class="dropdown-item" data-toggle="modal" data-target="#fullPayment">On-time
-                                Full
-                                Payment</a>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#partPayment"> Part
-                                Payment </a>
+                <div id="addfees" class="tabcontent">
+                    <div class=" row teachersListTable card-heading-paragraph">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h2>Search Fees per session</h2>
+                            <p> Here you can find out the fees at different sessions and different terms</p>
                         </div>
+                        <form class="searchform">
+                            <div class="form-row ">
+                                <div class="col-lg-5 col-md-5 col-sm-12 col-12 form-inputs">
+                                    <label>Select Session</label>
+                                    <select class="custom-select form-controls">
+                                        <option class="form-controls">-select-</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-12 col-12 form-inputs">
+                                    <label>Select Term</label>
+                                    <select class="custom-select">
+                                        <option>-select-</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-2 col-md-2 col-sm-12 col-12 form-inputs">
+                                    <button class="addteachersbtn Applybtn">Apply</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-
-
-                    <!-- Modal for adding full payment starts here -->
-                    <div class="modal fade " id="fullPayment" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content wide-modal">
-                                <div class="modal-header">
-                                    <h5 class="modal-title title-of-modal" id="exampleModalLabel">Add Full
-                                        Payment
-                                    </h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-inputs">
-                                            <label> Admission Number</label>
-                                            <select>
-                                                <option>- select -</option>
-                                                <option>ISCHOLA001</option>
-                                                <option>ISCHOLA002</option>
-                                                <option>ISCHOLA003</option>
-                                                <option></option>
-                                            </select>
-                                        </div>
-                                        <div class="form-inputs">
-                                            <label>Students Name</label>
-                                            <input type="text" placeholder="Students Name Autogenerated" disabled>
-                                        </div>
-
-                                        <div class="form-inputs">
-                                            <label>Income Amount</label>
-                                            <input type="number"
-                                                placeholder="type in the amount without the comma eg: 30000 for 30,000">
-                                        </div>
-
-                                        <div class="form-inputs">
-                                            <label>Transaction Date</label>
-                                            <input type="date">
-                                        </div>
-                                        <button type="button" class="secondary-button"
-                                            data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="addteachersbtn">Save changes</button>
-
-
-                                    </form>
-                                </div>
-
-                                <div class="modal-footer ">
-
-                                </div>
-
+                    <div class="row teachersListTable card-heading-paragraph">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div>
+                                <h2 style="margin-bottom: 25px;"><b>Session:</b>2020/2021 </h2>
+                            </div>
+                            <div>
+                                <h2 style="margin-bottom: 25px;"><b>Term</b> 2nd </h2>
                             </div>
                         </div>
-                    </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <button class="addteachersbtn" style="float: right;" data-toggle="modal"
+                                data-target="#addnewfees">Add Fee</button>
+                            <div class="modal fade " id="addnewfees" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content wide-modal">
+                                        <div class="modal-header">
+                                            <div class="modal-title" id="exampleModalLabel">
+                                                <h2 class="fs-title" style="text-align: left;">Add New Fee </h2>
+                                                <p class="fs-subtitle" style="text-align: left;">Here you can add a new
+                                                    fee type eg, Tution fee,
+                                                    Exam fee</p>
+                                            </div>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
 
-                    <!-- Modal for adding Part payment starts here -->
-                    <div class="modal fade " id="partPayment" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content wide-modal">
-                                <div class="modal-header">
-                                    <h5 class="modal-title title-of-modal" id="exampleModalLabel">Add
-                                        Expense
-                                        Transaction
-                                    </h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
 
+                                                <div class="form-inputs">
+                                                    <label> Fee Type</label>
+                                                    <input type="text"
+                                                        placeholder="Eg Tution fee, Exam Fee, Boarding fees etc.">
+                                                </div>
+
+                                                <div class="form-inputs">
+                                                    <label>Session</label>
+                                                    <select>
+                                                        <option>-select-</option>
+                                                        <option>2020/2021</option>
+                                                        <option>2021/2022</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-inputs">
+                                                    <Label> Term </Label>
+                                                    <select multiple="multiple" id="myMulti">
+                                                        <option>-select-</option>
+                                                        <option>First Term</option>
+                                                        <option>Second Term</option>
+                                                        <option>Third Term</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-inputs">
+                                                    <label>Class</label>
+                                                    <Select name="class" multiple="" class="ui fluid dropdown">
+                                                        <option value="jss1"> Jss1 </option>
+                                                        <option value="jss2"> Jss2 </option>
+                                                        <option value="jss3"> Jss3 </option>
+                                                        <option> SSS1 </option>
+                                                        <option> SSS2 </option>
+                                                        <option> SSS3 </option>
+
+                                                    </Select>
+                                                </div>
+                                                <div class="form-inputs">
+                                                    <label>Amount</label>
+                                                    <input type="number" placeholder="Enter Amount here eg: 10000">
+                                                </div>
+                                                <button type="button" class="secondary-button"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="addteachersbtn">Save Changes</button>
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-inputs">
-                                            <label> Transaction Category</label>
-                                            <select>
-                                                <option>- select -</option>
-                                                <option>Fees</option>
-                                                <option>Book Sale</option>
-                                                <option>Store Sales( uniforms, sportswear, etc)</option>
-                                                <option></option>
-                                            </select>
-                                        </div>
-                                        <div class="form-inputs">
-                                            <label>Transaction Description</label>
-                                            <textarea rows="4"></textarea>
-                                        </div>
-
-                                        <div class="form-inputs">
-                                            <label>Expense Amount</label>
-                                            <input type="number"
-                                                placeholder="type in the amount without the comma eg: 30000 for 30,000">
-                                        </div>
-
-                                        <div class="form-inputs">
-                                            <label>Transaction Date</label>
-                                            <input type="date">
-                                        </div>
-                                        <button type="button" class="secondary-button"
-                                            data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="addteachersbtn">Save changes</button>
-
-
-                                    </form>
-                                </div>
-
-                                <div class="modal-footer ">
-
-                                </div>
-
                             </div>
                         </div>
+                        <table id="example" class="table table-striped table-responsive-sm table-responsive-xs "
+                            style="width:100% ">
+                            <thead>
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th> Classes </th>
+                                    <th>Amount</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tution Fee</td>
+                                    <td>Jss1, Jss2, Jss3 </td>
+                                    <td>N 10,000</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Exam Fee</td>
+                                    <td>Jss1, Jss2, Jss3 </td>
+                                    <td>N 500</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Tution Fee</td>
+                                    <td>sss1, sss2, sss3 </td>
+                                    <td>N 10,000</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Exam Fee</td>
+                                    <td>sss1, sss2, sss3 </td>
+                                    <td>N 500</td>
+
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th> Classes </th>
+                                    <th>Amount</th>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
 
 
+                </div>
+                <div id="makepayment" class="tabcontent">
+                    <div class="row teachersListTable tab-nav">
+                        <button class="tabbtn2" onclick="tab2(this, 'fullpayment')" id="activeOpen">Full
+                            Payment</button>
+                        <button class="tabbtn2" onclick="tab2(this, 'partpayment')">Part Payment</button>
+                    </div>
+                    <div id="fullpayment" class="tabcontent2 card-heading-paragraph">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h2 style="margin-top: 40px;">Make Full Payment</h2>
+                            <p style="margin-bottom: 40px;"> Here you can maually add a student's fee, who paid in cash,
+                                to the school</p>
+                        </div>
+                        <form>
+                            <div class="form-row newFormRow">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-12 form-inputs">
+                                    <label>Select Session</label>
+                                    <select class="custom-select form-controls blackbg ">
+                                        <option>2020/2021</option>
+                                        <option>2021/2022</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-3 col-6 form-inputs">
+                                    <label>Select Term</label>
+                                    <select class="custom-select form-controls blackbg ">
+                                        <option>First Term</option>
+                                        <option>Second Term</option>
+                                        <option>Third Term</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-3 col-6 form-inputs">
+                                    <label>Select Class</label>
+                                    <select class="custom-select form-controls blackbg">
+                                        <option value="jss1"> Jss1 </option>
+                                        <option value="jss2"> Jss2 </option>
+                                        <option value="jss3"> Jss3 </option>
+                                        <option> SSS1 </option>
+                                        <option> SSS2 </option>
+                                        <option> SSS3 </option>
+                                    </select>
+                                </div>
+    
+                            </div>
+                            <div class="form-row newFormRow">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 form-inputs ">
+                                    <label>Fee Type</label>
+                                    <select multiple="" class="blackbg multipled">
+                                        <option>- Select Fess -</option>
+                                        <option>Tution fee</option>
+                                        <option>Exam fee</option>
+                                        <option>Boarding fee</option>
+    
+                                    </select>
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 form-inputs">
+                                    <label>Amount</label>
+                                    <input type="number" placeholder="200,000" value="200,000" disabled class="blackbg"> 
+    
+                                </div>
+                            </div>
+                            <div class="form-row newFormRow">
+                            <button type="submit" class="addteachersbtn">Pay</button>
+                        </div>
+                        </form>
+                    </div>
+                    
+                    <div id="partpayment" class="tabcontent2 card-heading-paragraph ">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h2 style="margin-top: 40px;">Make Part Payment</h2>
+                            <p style="margin-bottom: 40px;"> Here you can maually add a student's fee, who did not pay in full,
+                                to the school</p>
+                        </div>
+                        <form>
+                            <div class="form-row newFormRow">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-12 form-inputs">
+                                    <label>Select Session</label>
+                                    <select class="custom-select form-controls blackbg ">
+                                        <option>2020/2021</option>
+                                        <option>2021/2022</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-3 col-6 form-inputs">
+                                    <label>Select Term</label>
+                                    <select class="custom-select form-controls blackbg ">
+                                        <option>First Term</option>
+                                        <option>Second Term</option>
+                                        <option>Third Term</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-3 col-6 form-inputs">
+                                    <label>Select Class</label>
+                                    <select class="custom-select form-controls blackbg">
+                                        <option value="jss1"> Jss1 </option>
+                                        <option value="jss2"> Jss2 </option>
+                                        <option value="jss3"> Jss3 </option>
+                                        <option> SSS1 </option>
+                                        <option> SSS2 </option>
+                                        <option> SSS3 </option>
+                                    </select>
+                                </div>
+    
+                            </div>
+                            <div class="form-row newFormRow">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 form-inputs ">
+                                    <label>Fee Type</label>
+                                    <select multiple="" class="blackbg multipled">
+                                        <option>- Select Fess -</option>
+                                        <option>Tution fee</option>
+                                        <option>Exam fee</option>
+                                        <option>Boarding fee</option>
+    
+                                    </select>
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 form-inputs">
+                                    <label>Amount</label>
+                                    <input type="number" placeholder="200,000" value="200,000"  class="blackbg"> 
+    
+                                </div>
+                            </div>
+                            <div class="form-row newFormRow">
+                            <button  class="addteachersbtn"  data-toggle="modal"
+                            data-target="#printreceipt">Pay</button>
+                            <div class="modal fade " id="printreceipt" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content wide-modal">
+                                        <div class="modal-header">
+                                            <div class="modal-title" id="exampleModalLabel">
+                                                <h2 class="fs-title" style="text-align: left;">Add New Fee </h2>
+                                                <p class="fs-subtitle" style="text-align: left;">Here you can add a new
+                                                    fee type eg, Tution fee,
+                                                    Exam fee</p>
+                                            </div>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
 
-                    <table id="example" class="table table-striped table-responsive-sm table-responsive-xs "
-                        style="width:100% ">
-                        <thead>
-                            <tr>
-                                <th>Receipt Number</th>
-                                <th> Category</th>
-                                <th>Description</th>
-                                <th>Date of Transaction</th>
-                                <th>Type</th>
-                                <th>Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Income </td>
-                                <td> 200,000</td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td>Expenses </td>
-                                <td> 200,000 </td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>unifrom</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Income </td>
-                                <td> 200,000</td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Expense</td>
-                                <td> 200,000 </td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Income </td>
-                                <td> 200,000</td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td>Expense </td>
-                                <td> 200,000 </td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Income </td>
-                                <td> 200,000</td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td>Expense </td>
-                                <td> 200,000 </td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Income </td>
-                                <td> 200,000</td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td>Expense</td>
-                                <td> 200,000 </td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td> Income </td>
-                                <td> 200,000</td>
-                            </tr>
-                            <tr>
-                                <td>ISCHOLA001</td>
-                                <td>Books</td>
-                                <td>English Text Book</td>
-                                <td>03/12/2020</td>
-                                <td>Expense</td>
-                                <td> 200,000 </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Receipt Number</th>
-                                <th> Category</th>
-                                <th>Description</th>
-                                <th>Date of Transaction</th>
-                                <th>Income</th>
-                                <th>Expense</th>
-                            </tr>
-                        </tfoot>
-                    </table>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                        </div>
+
+                                        <div class="modal-footer">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
                 </div>
 
 
@@ -460,11 +678,13 @@
     </div>
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="js/multiform.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="build/js/intlTelInput.js"></script>
 
     <script src="js\parsely.js"></script>
+
     <script>
         var input = document.querySelector(".phone");
         window.intlTelInput(input, {
@@ -479,7 +699,13 @@
             utilsScript: "build/js/utils.js" // just for formatting/placeholders etc
         });
     </script>
-   
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+        document.getElementById("activeOpen").click();
+    </script>
+
 
 
 
