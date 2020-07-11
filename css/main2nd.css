@@ -1,0 +1,211 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    *:hover,
+    *:focus,
+    *:active {
+        outline: none;
+    }
+    
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        background-color: red;
+        border-radius: 50%;
+        margin: 5px;
+        background-image: url("../img/img_avatar2.png");
+        background-size: contain;
+    }
+    
+    .small-text {
+        font-size: x-small;
+        margin-bottom: 0px;
+    }
+    
+    .student-profile {
+        border-right: 2px #f1f1f1 solid;
+    }
+    
+    #due-fees {
+        color: red;
+    }
+    
+    .change-password:hover {
+        background-color: #b4b4b4;
+        cursor: pointer;
+    }
+    /* Style tab links */
+    
+    .tab-btn {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 15px;
+        margin: 0px 20px;
+        font-size: 17px;
+        background-color: #ffffff;
+    }
+    
+    .tab-btn2 {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 15px;
+        margin: 0px 20px;
+        font-size: 17px;
+        background-color: #ffffff;
+    }
+    
+    .tab-btn:hover {
+        background-color: #ccc;
+    }
+    
+    .tab-btn2:hover {
+        background-color: #ccc;
+    }
+    
+    .tab-btn button {
+        margin: 0px;
+    }
+    
+    .tab-btn2 button {
+        margin: 0px;
+    }
+    
+    .tab-nav {
+        width: 100%;
+        text-align: justify;
+    }
+    
+    .tabcontent {
+        color: black;
+        display: none;
+    }
+    
+    .tabcontentt {
+        width: 100%;
+        color: black;
+    }
+    
+    .tabcontent2 {
+        color: black;
+        display: none;
+    }
+    
+    .detaills p {
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+    
+    .displaytableuser {
+        padding: auto 15px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        border-radius: 5px;
+        margin: 0px auto;
+        margin-top: 25px;
+        background-color: white;
+    }
+    
+    .holdFilterBtn {
+        margin-top: 30px;
+        vertical-align: bottom;
+    }
+    
+    button:active,
+    button:focus {
+        outline: none;
+        border-bottom: #7c0000;
+    }
+    
+    .chip {
+        display: inline-block;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+    
+    .chip img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    
+    .displayparentinfo {
+        padding: 15px;
+        margin: 5px;
+        background-color: #ffffff;
+        -webkit-box-shadow: 0px 0px 27px -5px rgba(0, 0, 0, 0.17);
+        -moz-box-shadow: 0px 0px 27px -5px rgba(0, 0, 0, 0.17);
+        box-shadow: 0px 0px 27px -5px rgba(0, 0, 0, 0.17);
+    }
+    
+    .pay-btn {
+        background-color: #F26419;
+        border-color: #F26419;
+        color: white;
+    }
+    
+    .pay-btn:hover {
+        background-color: #f15d0e;
+        color: white;
+    }
+    
+    .pay-btn:focus,
+    .pay-btn:active {
+        outline: none;
+        background-color: #f15d0e;
+        border-color: #f15d0e;
+    }
+    
+    .sidebarCard {
+        margin: 0px 5px 10px 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .sidebar h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .chip a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    div.dataTables_wrapper {
+        margin-bottom: 3em;
+    }
+    
+    table tbody tr td input {
+        width: 50px;
+    }
+    
+    tr th,
+    tr td {
+        text-align: center;
+    }
+    /* .myresultTable {
+        overflow: auto;
+    } */
+    
+    @media only screen and (max-width: 578px) {
+        .holdFilterBtn {
+            margin-top: 15px auto;
+            position: static;
+        }
+    }
+    
+    .search-form {
+        width: 100%;
+    }
